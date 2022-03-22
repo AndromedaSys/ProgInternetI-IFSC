@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import url(fontes/dauphin-normal.ttf);
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    
+}
+
+p#cab{
+    text-align: center;
+}
+
+p{
+    text-align: inherit;
+}
+
+div{
+    text-align: justify;
+    display: inline-block;
+    width: 400px;
+    padding: 10px 40px;
+    position: relative;
+}
+body{
+    width: auto;
+}
