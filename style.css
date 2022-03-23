@@ -1,12 +1,17 @@
 @charset "UTF-8";
-@import url(fontes/dauphin-normal.ttf);
+@font-face {
+    font-family: 'fonteteste';
+    src: url('/fontes/dauphin-normal.ttf') format('TrueType');
+}
 
 h1{
     text-align: center;
+    font-family: 'fonteteste';
 }
 
 h2{
     text-align: center;
+    font-family: 'fonteteste;';
     
 }
 
