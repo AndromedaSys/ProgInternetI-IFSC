@@ -1,0 +1,40 @@
+
+/*  ###  ENTREGA 08/05  ###   */
+
+@charset "UTF-8";
+
+:root{
+    --cor01: #ffffff;
+    --cor02: #000000;
+    --cor03: #808080;
+    
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+header#upper{
+    background-color: var(--cor02);
+    color: var(--cor01);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: justify;
+    padding-left: 10px;
+}
+
+header#upper>nav{
+    color: currentColor;
+    display: block;
+    cursor: pointer;
+    padding: 10px 200px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
