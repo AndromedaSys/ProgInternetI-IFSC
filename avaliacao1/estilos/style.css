@@ -7,13 +7,16 @@
     --cor01: #ffffff;
     --cor02: #000000;
     --cor03: #808080;
-    
-
+    --cor04: #b71111;
 }
 
 *{
     margin: 0px;
     padding: 0px;
+}
+
+li{
+    list-style-image: url(../imagens/barra_ul.png);
 }
 
 img{
@@ -22,6 +25,18 @@ img{
 
 a{
     text-decoration: none;
+    padding: 20px;
+    margin: 20px;
+}
+
+h1, h2, h3{
+    padding-bottom: 10px;
+}
+
+div{
+    width: 200px;
+    display: inline-block;
+    border-top: var(--cor04);
 }
 
 header#upper{
@@ -30,8 +45,9 @@ header#upper{
     text-transform: uppercase;
     text-decoration: none;
     text-align: justify;
-    padding-left: 10px;
+    padding: 25px;
 }
+
 
 header#upper>nav{
     color: currentColor;
@@ -58,4 +74,8 @@ nav#main_nav {
     text-transform: uppercase;
     border-top: var(--cor02);
     border-bottom: var(--cor03);
+}
+
+section{
+    margin-top: 20px;
 }
