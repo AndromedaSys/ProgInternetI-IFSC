@@ -8,6 +8,7 @@
     --cor02: #000000;
     --cor03: #808080;
     --cor04: #b71111;
+    --cor07: #fcc70a;   
 }
 
 *{
@@ -15,10 +16,13 @@
     padding: 0px;
 }
 
-li{
-    list-style-image: url(../imagens/barra_ul.png);
+.li_vermelha{
+    list-style-image: url(../imagens/barra_ul_vermelha.png);
 }
 
+.li_preta{
+    list-style-image: url(../imagens/barra_ul_preta.png);
+}
 img{
     width: 100%;
 }
@@ -33,10 +37,35 @@ h1, h2, h3{
     padding-bottom: 10px;
 }
 
+h1#header{
+    text-transform: uppercase;
+    text-align: center;
+    font-style: normal;
+}
+
 div{
     width: 200px;
     display: inline-block;
     border-top: var(--cor04);
+}
+
+div#header{
+    align-items: center;
+    display: inline-block;
+}
+
+.div_main{
+    flex-direction: inherit;
+}
+
+.destaque_esporte{
+    padding: 10px;
+    text-align: justify;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: var(--cor07);
 }
 
 header#upper{
@@ -58,7 +87,7 @@ header#upper>nav{
     margin-left: 50px;
 }
 
-main {
+main#index {
     background-color: var(--cor01);
     padding: 20px;
     min-width: 320px;
