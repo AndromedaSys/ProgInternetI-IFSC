@@ -8,7 +8,11 @@
     --cor02: #000000;
     --cor03: #808080;
     --cor04: #b71111;
-    --cor07: #fcc70a;   
+    --cor05: #19a39a;
+    --cor06: #0c5355;
+    --cor07: #fcc70a; 
+    --cor08: #f2f2f2;
+
 }
 
 *{
@@ -23,6 +27,11 @@
 .li_preta{
     list-style-image: url(../imagens/barra_ul_preta.png);
 }
+
+.li_branca{
+    list-style-image: url(../imagens/barra_ul_branca.png);
+}
+
 img{
     width: 100%;
 }
@@ -37,25 +46,29 @@ h1, h2, h3{
     padding-bottom: 10px;
 }
 
-h1#header{
+.h1_header{
     text-transform: uppercase;
     text-align: center;
     font-style: normal;
 }
 
-div{
-    width: 200px;
-    display: inline-block;
-    border-top: var(--cor04);
-}
 
-div#header{
+.div_header{
     align-items: center;
     display: inline-block;
 }
 
 .div_main{
     flex-direction: inherit;
+}
+.div_cinza{
+    background-color: var(--cor08);
+    padding: 10px;
+}
+
+.destaque_economia{
+    padding: 10px; 
+    background-image: linear-gradient(45deg, var(--cor05), var(--cor06));
 }
 
 .destaque_esporte{
