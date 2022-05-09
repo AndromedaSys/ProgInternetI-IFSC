@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Formulário Inscrição</title>
+</head>
+<body>
+    <header class="header_esporte">
+        <nav>
+            <a href="./index.html"><img src="imagens/logoUOLbranco.png" alt="logo UOL" class="img_minilogo"></a>
+            <a href="" class="a_topheader">ingresso.com</a>
+            <a href="" class="a_topheader">bate-papo</a>
+            <a href="" class="a_topheader">meu negócio</a>
+            <a href="" class="a_topheader">passei direto</a>
+            <a href="" class="a_topheader">pagseguro</a>
+            <a href="" class="a_topheader">uol play</a>
+        </nav>
+        
+        <nav id="nav_noticias">
+            <a href="./noticias.html" class="a_bottomheader">Notícias</a>
+            <a href="./economia.html" class="a_bottomheader">Economia</a>
+            <a href="./esporte.html" class="a_bottomheader">Esporte</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <form action="action_page.php">
+        
+              <label for="fname">Nome</label>
+              <input type="text" id="fname" name="firstname" placeholder="Seu nome..">
+        
+              <label for="lname">Sobrenome</label>
+              <input type="text" id="lname" name="lastname" placeholder="Seu sobrenome..">
+        
+              <label for="country">País</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+        
+              <label for="descricao">Descrição</label>
+              <textarea id="descricao" name="subject" placeholder="Escreva algo..." style="height:200px"></textarea>
+        
+              <input type="enviar" value="Enviar">
+        
+            </form>
+          </div>
+    </section>
+</body>
+</html>

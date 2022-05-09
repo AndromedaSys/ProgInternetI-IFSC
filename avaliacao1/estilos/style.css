@@ -10,14 +10,18 @@
     --cor04: #b71111;
     --cor05: #19a39a;
     --cor06: #0c5355;
-    --cor07: #fcc70a; 
-    --cor08: #f2f2f2;
+    --cor07: #ffe113; 
+    --cor08: #f9b402;
+    --cor09: #2e6dee;
+    --cor10: #4e2ed3;
+    --cor11: #f2f2f2;
 
 }
 
 *{
     margin: 0px;
     padding: 0px;
+    font-family: sans-serif;
 }
 
 .li_vermelha{
@@ -32,75 +36,83 @@
     list-style-image: url(../imagens/barra_ul_branca.png);
 }
 
+.li_verde{
+    list-style-image: url(../imagens/barra_ul_verde.png);
+}
+
 img{
     width: 100%;
 }
 
 a{
     text-decoration: none;
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
+    color: var(--cor01);
+}
+
+.a_index{
+    text-transform: uppercase;
+    font-weight: normal;
+    color: var(--cor02);
+    
+}
+
+.a_topheader{
+    text-transform: uppercase;
+    font-weight: normal;
+    color: var(--cor01);
+}
+
+.a_bottomheader{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--cor01);
 }
 
 h1, h2, h3{
     padding-bottom: 10px;
+    text-align: justify;
 }
 
 .h1_header{
     text-transform: uppercase;
     text-align: center;
-    font-style: normal;
+    font-weight: 100;
+    font-size: 3em;
+    font-family: sans-serif;
 }
 
-
-.div_header{
-    align-items: center;
-    display: inline-block;
-}
-
-.div_main{
-    flex-direction: inherit;
-}
-.div_cinza{
-    background-color: var(--cor08);
-    padding: 10px;
-}
-
-.destaque_economia{
-    padding: 10px; 
+.header_economia{
     background-image: linear-gradient(45deg, var(--cor05), var(--cor06));
-}
-
-.destaque_esporte{
-    padding: 10px;
-    text-align: justify;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    background-color: var(--cor07);
-}
-
-header#upper{
-    background-color: var(--cor02);
     color: var(--cor01);
     text-transform: uppercase;
-    text-decoration: none;
-    text-align: justify;
-    padding: 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
 }
 
-
-header#upper>nav{
-    color: currentColor;
-    display: block;
-    cursor: pointer;
-    padding: 10px 200px;
-    margin-right: 50px;
-    margin-left: 50px;
+.header_noticias{
+    background-image: linear-gradient(45deg, var(--cor09), var(--cor10));
+    color:var(--cor01);
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
 }
 
-main#index {
+.header_esporte{
+    background-image: linear-gradient(45deg, var(--cor07), var(--cor08));
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.header_index{
     background-color: var(--cor01);
     padding: 20px;
     min-width: 320px;
@@ -112,12 +124,185 @@ main#index {
     border-bottom-right-radius: 10px;
 }
 
-nav#main_nav {
+div{
+    display: inline-block;
+}
+
+.div_header{
+    align-items: center;
+    display: inline-block;
+}
+
+.div_main{
+    flex-direction: inherit;
+}
+
+.div_cinza{
+    background-color: var(--cor11);
+    padding: 10px;
+    text-align: justify;
+}
+
+.div_card{
+    display: inline-block;
+    max-width: 250px;
+    text-align: left;
+    padding: 10px;
+    
+}
+
+.div_smallcard{
+    display: inline-block;
+    max-width: 180px;
+    text-align: left;
+    padding: 10px;
+    
+}
+
+.div_container{
+    display: inline-block;
+    max-width: 600px;
+    height: 300px;
+    padding: 10px;
+}
+
+.div_titulo{
+    text-align: center;
+    display: inline;
+}
+
+.div_indexheader{
+    border-top: 2px solid var(--cor02);
+    border-bottom: 1px solid var(--cor03);
+    width: 100%;
+}
+
+.div_destaque{
+    text-align: center;
+    width: 100%;
+}
+
+.destaque_economia{
+    padding: 40px; 
+    background-image: linear-gradient(45deg, var(--cor05), var(--cor06));
+    color: var(--cor01);
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.destaque_esporte{
+    padding: 40px;
+    background-image: linear-gradient(45deg, var(--cor07), var(--cor08));
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.destaque_noticias{
+    padding: 40px;
+    background-image: linear-gradient(45deg, var(--cor09), var(--cor10));
+    color: var(--cor01);
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.header_upper{
+    background-color: var(--cor02);
+    color: var(--cor01);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: justify;
+    padding: 25px;
+}
+
+.header_index{
+    color: var(--cor02);
+}
+
+section{
+    background-color: var(--cor01);
+    padding: 20px;
+    min-width: 320px;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px var(--cor5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 60px;
+}
+
+.nav_main{
     text-transform: uppercase;
     border-top: var(--cor02);
     border-bottom: var(--cor03);
 }
 
-section{
-    margin-top: 20px;
+
+.img_card{
+    max-width: 250px;
 }
+
+.img_smallcard{
+    max-width: 180px;
+}
+
+.img_chamada{
+    max-width: 200px;
+}
+
+.img_logo{
+    max-width: 130px;
+}
+
+.img_minilogo{
+    max-width: 80px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-image: linear-gradient(45deg, var(--cor07), var(--cor08));
+  }
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+  }
+  
+  input[type=enviar] {
+    background-image: linear-gradient(45deg, var(--cor07), var(--cor08));
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+ 
+  input[type=enviar]:hover {
+    background-image: linear-gradient(45deg, var(--cor08), var(--cor07));
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
