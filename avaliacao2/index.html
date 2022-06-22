@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagens/favicon_day.ico" 
+    type="image/x-icon">
+    <link rel="stylesheet" href="./estilos/style.css">
+    
+    <title>Projeto 2</title>
+</head>
+<body>
+
+    <a href="#" class="botao" id="DM"><span>Dark Mode</span><i></i></a>
+
+    <div class="container">
+        <div class="coluna active">
+            <div class="conteudo">
+                <h1>1</h1>
+                <div class="box">
+                    <a href="./pag01.html">
+                        <h2>O que é ipsum?</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus, esse, accusantium possimus at quas dolorum minus incidunt officia officiis odit ipsa tempore aut sit. Porro et adipisci maxime ab.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat delectus rerum et ducimus eaque. Consequuntur dolores ex facere aperiam, natus laborum obcaecati nihil similique sint praesentium explicabo corrupti doloremque quidem.
+                        </p>
+                    </a>
+                </div>     
+            </div>
+            <div class="bg bg1"></div>
+        </div>        
+        <div class="coluna">
+            <div class="conteudo">
+                <h1>2</h1>
+                <div class="box">
+                    <a href="./pag02.html">
+                        <h2>O que é ipsum?</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus, esse, accusantium possimus at quas dolorum minus incidunt officia officiis odit ipsa tempore aut sit. Porro et adipisci maxime ab.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat delectus rerum et ducimus eaque. Consequuntur dolores ex facere aperiam, natus laborum obcaecati nihil similique sint praesentium explicabo corrupti doloremque quidem.
+                        </p>
+                    </a>
+                </div>     
+            </div>
+            <div class="bg bg2"></div>
+        </div>
+        <div class="coluna">
+            <div class="conteudo">
+                <h1>3</h1>
+                <div class="box">
+                    <a href="./pag03.html">
+                        <h2>O que é ipsum?</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus, esse, accusantium possimus at quas dolorum minus incidunt officia officiis odit ipsa tempore aut sit. Porro et adipisci maxime ab.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat delectus rerum et ducimus eaque. Consequuntur dolores ex facere aperiam, natus laborum obcaecati nihil similique sint praesentium explicabo corrupti doloremque quidem.
+                        </p>
+                    </a>
+                </div>     
+            </div>
+            <div class="bg bg3"></div>
+        </div>
+        <div class="coluna">
+            <div class="conteudo">
+                <h1>4</h1>
+                <div class="box">
+                    <a href="./pag04.html">
+                        <h2>O que é ipsum?</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus, esse, accusantium possimus at quas dolorum minus incidunt officia officiis odit ipsa tempore aut sit. Porro et adipisci maxime ab.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat delectus rerum et ducimus eaque. Consequuntur dolores ex facere aperiam, natus laborum obcaecati nihil similique sint praesentium explicabo corrupti doloremque quidem.
+                        </p>
+                    </a>
+                </div>     
+            </div>
+            <div class="bg bg4"></div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).on('mouseover', '.container .coluna', function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+        
+        var toggle = document.getElementById("DM");
+
+        var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        if (storedTheme)
+            document.documentElement.setAttribute('data-theme', storedTheme)
+
+
+        toggle.onclick = function() {
+            var currentTheme = document.documentElement.getAttribute("data-theme");
+            var targetTheme = "light";
+
+            if (currentTheme === "light") {
+              targetTheme = "dark";
+            }
+
+            document.documentElement.setAttribute('data-theme', targetTheme)
+            localStorage.setItem('theme', targetTheme);
+};
+    </script>
+</body>
+</html>
