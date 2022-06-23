@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="pt-br" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./imagens/favicon_day.ico" 
-    type="image/x-icon">
+    type="image/x-icon"  id="favicon">
     <link rel="stylesheet" href="./estilos/style.css">
     
-    <title>Projeto 2</title>
+    <title>Home Projeto 2</title>
 </head>
 <body>
 
@@ -17,12 +17,12 @@
     <div class="container">
         <div class="coluna active">
             <div class="conteudo">
-                <h1>1</h1>
+                <h1><img src="imagens/B-color-palette.png" alt="" class="img_fundo"></h1>
                 <div class="box">
                     <a href="./pag01.html">
-                        <h2>O que é ipsum?</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus, esse, accusantium possimus at quas dolorum minus incidunt officia officiis odit ipsa tempore aut sit. Porro et adipisci maxime ab.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat delectus rerum et ducimus eaque. Consequuntur dolores ex facere aperiam, natus laborum obcaecati nihil similique sint praesentium explicabo corrupti doloremque quidem.
+                        <h2>Definição de estilo</h2>
+                        <p>
+                            Apresentação da cartela de cores selecionada e alguns elementos de estilo sobre o trabalho proposto.
                         </p>
                     </a>
                 </div>     
@@ -31,12 +31,12 @@
         </div>        
         <div class="coluna">
             <div class="conteudo">
-                <h1>2</h1>
+                <h1><img src="./imagens/B-checked.png" alt="" class="img_fundo"></h1>
                 <div class="box">
                     <a href="./pag02.html">
-                        <h2>O que é ipsum?</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus, esse, accusantium possimus at quas dolorum minus incidunt officia officiis odit ipsa tempore aut sit. Porro et adipisci maxime ab.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat delectus rerum et ducimus eaque. Consequuntur dolores ex facere aperiam, natus laborum obcaecati nihil similique sint praesentium explicabo corrupti doloremque quidem.
+                        <h2>Bora fazer uma lista?</h2>
+                        <p>
+                            Um golinho de listas e personalização de marcadores.
                         </p>
                     </a>
                 </div>     
@@ -45,12 +45,15 @@
         </div>
         <div class="coluna">
             <div class="conteudo">
-                <h1>3</h1>
+                <h1><img src="./imagens/B-list.png" alt="" class="img_fundo"></h1>
                 <div class="box">
                     <a href="./pag03.html">
-                        <h2>O que é ipsum?</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus, esse, accusantium possimus at quas dolorum minus incidunt officia officiis odit ipsa tempore aut sit. Porro et adipisci maxime ab.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat delectus rerum et ducimus eaque. Consequuntur dolores ex facere aperiam, natus laborum obcaecati nihil similique sint praesentium explicabo corrupti doloremque quidem.
+                        <h2>Algo sobre tabelas</h2>
+                        <p>
+                            Seção dedicada a apresentação de tabelas.
+                        </p>
+                        <p>
+                            Apresentação de grande tabela com cabeçalho fixo.
                         </p>
                     </a>
                 </div>     
@@ -59,12 +62,15 @@
         </div>
         <div class="coluna">
             <div class="conteudo">
-                <h1>4</h1>
+                <h1><img src="./imagens/B-setting.png" alt="" class="img_fundo"></h1>
                 <div class="box">
                     <a href="./pag04.html">
-                        <h2>O que é ipsum?</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus, esse, accusantium possimus at quas dolorum minus incidunt officia officiis odit ipsa tempore aut sit. Porro et adipisci maxime ab.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat delectus rerum et ducimus eaque. Consequuntur dolores ex facere aperiam, natus laborum obcaecati nihil similique sint praesentium explicabo corrupti doloremque quidem.
+                        <h2>Documentação</h2>
+                        <p>
+                            Aqui você poderá acompanhar a documentação de criação desse trabalho.
+                        </p>
+                        <p>
+                            Acesso ao link de documentação do GitHub e ao vídeo de apresentação.
                         </p>
                     </a>
                 </div>     
@@ -89,13 +95,19 @@
         toggle.onclick = function() {
             var currentTheme = document.documentElement.getAttribute("data-theme");
             var targetTheme = "light";
+            const faviconTag = document.getElementById("favicon")
+
+            faviconTag.href = "./imagens/favicon_day.ico"
 
             if (currentTheme === "light") {
               targetTheme = "dark";
+              faviconTag.href = "./imagens/favicon_night.ico"
             }
 
             document.documentElement.setAttribute('data-theme', targetTheme)
             localStorage.setItem('theme', targetTheme);
+
+        
 };
     </script>
 </body>
