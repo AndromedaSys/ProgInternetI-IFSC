@@ -15,6 +15,7 @@
     --Paleta01: #06283D;
     --Paleta02: #1363DF;
     --Paleta03: #47B5FF;
+    --Paleta03: #47B5FF;
     --Paleta04: #DFF6FF;
 }
 
@@ -301,10 +302,38 @@ a.botao:hover i::after{
 
 /* ### Config Pag01 ### */
 
-body.p1{
-    background-color: #fff;
+.main_pag01{
+    text-align: center;
 }
 
+body.p1{
+    background-color: var(--Cor02);
+    color: var(--Paleta01);
+}
+
+.div_pag01{
+    display: inline-block;
+    border: 2px solid var(--Paleta01);
+    border-radius: 5px;
+    padding: 40px;
+}
+
+.PCor01{
+    background-color: var(--Paleta01);
+    color: var(--Paleta04);
+}
+
+.PCor02{
+    background-color: var(--Paleta02);
+}
+
+.PCor03{
+    background-color: var(--Paleta03);
+}
+
+.PCor04{
+    background-color: var(--Paleta04);
+}
 
 /* ### Config Pag02 ### */
 
@@ -326,23 +355,24 @@ table{
     border-collapse: collapse;
     position: relative;
     left: 35%;
+    border-color: var(--Paleta01);
 }
 
 /* para fixar cabeçalho da tabela*/
 thead > tr > th {
     position: sticky;
     top: 46px;
-    background-color: grey;
+    background-color: var(--Paleta01);
 }
 
 td, th{
-    border: 1px solid black;
+    border: 1px solid var(--Paleta01);
     padding: 10px;            
 }
 
 thead, tfoot{
-    background-color: grey;
-    color: white;
+    background-color: var(--Paleta01);
+    color: var(--Paleta04);
 }
 
 .numero{
@@ -355,17 +385,69 @@ caption{
     font-size: 1.5em;
     font-weight: bold;
     padding: 10px;
-    background-color: lightgray;
+    background-color: var(--Paleta04);
 }
 
 /* nth-chil = subclasse
     pode-se usar a contagem de n, para efeito, ou: "odd" linhas ímpares; "even" para pares = 2n-1
 */
 tbody > tr:nth-child(2n){
-    background-color: lightgrey;
+    background-color: var(--Paleta04);
 }
 
+/* ### Dark Mode Pag03 ### */
 
+[data-theme='dark'] body.p3{
+    background-color: var(--Paleta01);
+    color: var(--Paleta04);
+
+}
+
+[data-theme='dark'] table{
+    width: 500px;
+    border-collapse: collapse;
+    position: relative;
+    left: 35%;
+    border-color: var(--Paleta04);
+}
+
+/* para fixar cabeçalho da tabela*/
+[data-theme='dark'] thead > tr > th {
+    position: sticky;
+    top: 46px;
+    background-color: var(--Paleta04);
+}
+
+[data-theme='dark'] td, th{
+    border: 1px solid var(--Paleta04);
+    padding: 10px;            
+}
+
+[data-theme='dark'] thead, tfoot{
+    background-color: var(--Paleta04);
+    color: var(--Paleta01);
+}
+
+[data-theme='dark'] .numero{
+    text-align: right;
+}
+
+[data-theme='dark'] caption{
+    position: sticky;
+    top: -1px;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: var(--Paleta02);
+}
+
+/* nth-chil = subclasse
+    pode-se usar a contagem de n, para efeito, ou: "odd" linhas ímpares; "even" para pares = 2n-1
+*/
+[data-theme='dark'] tbody > tr:nth-child(2n){
+    background-color: var(--Paleta03);
+    color: var(--Paleta01);
+}
 
 /* ###  Config Pag04 ### */
 
