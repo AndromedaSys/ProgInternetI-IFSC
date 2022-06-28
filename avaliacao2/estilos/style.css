@@ -40,10 +40,17 @@ body{
     background-image: linear-gradient(to right, var(--Paleta01), var(--Paleta02), var(--Paleta03), var(--Paleta04));
 }
 
+[data-theme='dark'] .nav_menu{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--Paleta04), var(--Paleta03), var(--Paleta02), var(--Paleta01));
+}
+
 .div_nav{
     width: 100px;
     height: 70px;
-    background: var(--Paleta04);
     position: relative;
     display: flex;
     justify-content: center;
@@ -75,18 +82,38 @@ body{
     font-weight: 500;
 }
 
+
 .div_nav ul li a .icone_menu{
     position: relative;
     display: block;
-    line-height: 75px;
     font-size: 1.5em;
     text-align: center;
     transition: 0.5s;
+}
 
+.div_home{
+    height: 30px;
+    width: 30px;
+    background-image: url(../imagens/Night-home.png);
+    background-size: cover;
+    transition: 0.5s;
+}
+
+[data-theme='dark'] .div_home{
+    height: 30px;
+    width: 30px;
+    background-image: url(../imagens/Day-home.png);
+    background-size: cover;
+    transition: 0.5s;
 }
 
 .div_nav ul li:hover a .icone_menu{
-    transform: translateY(-35px);
+    transform: translateY(-15px);
+}
+
+.div_nav ul li:hover a .div_home{
+    height: 20px;
+    width: 20px;
 }
 
 .div_nav ul li a .texto_menu{
@@ -96,12 +123,27 @@ body{
     letter-spacing: 0.05em;
     transition: 0.5s;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
+    color: var(--Paleta04);
+}
+
+[data-theme='dark'] .div_nav ul li a .texto_menu{
+    position: absolute;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+    color: var(--Paleta01);
 }
 
 .div_nav ul li:hover a .texto_menu{
     opacity: 1;
+    transform: translateY(10px);
 }
+
+
 
 /* ### HOME ###*/
 
@@ -284,6 +326,7 @@ a{
 }
 
 
+
 /* ### Botão Night Mode ### */
 a.botao{  
     position: relative;
@@ -391,7 +434,7 @@ body.p1{
 }
 
 .header_pag01{
-    padding: 2%;
+    padding: 10px;
     text-align: justify;
     size: 2em;
     background-image: linear-gradient(to right, var(--Paleta01), var(--Paleta02), var(--Paleta03), var(--Paleta04));
@@ -399,7 +442,7 @@ body.p1{
 }
 
 [data-theme='dark'] .header_pag01{
-    padding: 2%;
+    padding: 10px;
     text-align: justify;
     size: 2em;
     background-image: linear-gradient(to right, var(--Paleta04), var(--Paleta03), var(--Paleta02), var(--Paleta01));
@@ -462,18 +505,43 @@ body.p1{
 
 /* ### Config Pag02 ### */
 
-body.p2{
-    background-color: #fff;
+.div_pag02{
+    max-width: 1000px;
+    display: inline-block;
+    border: 2px solid var(--Paleta01);
+    border-radius: 5px;
+    padding: 40px;
+    margin: 1%;
 }
 
+[data-theme='dark'] .div_pag02{
+    max-width: 1000px;
+    display: inline-block;
+    border: 2px solid var(--Paleta04);
+    border-radius: 5px;
+    padding: 40px;
+    margin: 1%;
+}
 
+.p_pag02{
+    text-align: justify;
+}
 
+.li_01{
+    list-style: circle;
+}
+
+.li_02{
+    list-style: square;
+}
+
+.li_imagem1{
+    list-style-image: url(../imagens/favicon_day.ico);
+}
+.li_imagem2{
+    list-style-image: url(../imagens/favicon_night.ico);
+}
 /* ### Config Pag03 ### */
-
-body.p3{
-    background-color: #fff;
-
-}
 
 table{
     width: 500px;
@@ -521,12 +589,6 @@ tbody > tr:nth-child(2n){
 }
 
 /* ### Dark Mode Pag03 ### */
-
-[data-theme='dark'] body.p3{
-    background-color: var(--Paleta01);
-    color: var(--Paleta04);
-
-}
 
 [data-theme='dark'] table{
     width: 500px;
@@ -576,6 +638,16 @@ tbody > tr:nth-child(2n){
 
 /* ###  Config Pag04 ### */
 
-body.p4{
-    background-color: #fff;
+.div_github{
+    max-width: 600px;
+    height: 300px;
+    background-image: url(../imagens/Day-github.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+[data-theme='dark'] .div_github{
+    max-width: 600px;
+    background-image: url(../imagens/Night-github.png);
+    background-size: cover;
 }
