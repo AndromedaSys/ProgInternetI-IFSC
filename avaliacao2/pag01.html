@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagens/favicon_day.ico" 
+    type="image/x-icon"  id="favicon">
     <link rel="stylesheet" href="./estilos/style.css">
     <title>Sobre o estilo</title>
 </head>
@@ -11,33 +13,57 @@
 
     <a href="#" class="botao" id="DM"><span>Dark Mode</span><i></i></a>
 
+    <nav class="nav_menu">
+        <div class="div_nav">
+            <ul>
+                <li class="li_menu">
+                    <a href="./index.html">
+                        <span class="icone_menu">
+                            <img class="img_menu" src="./imagens/Day-home.png" alt="Home">
+                        </span>
+                        <span class="texto_menu">Home</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     
-    <header>
-        <h1>
+    <header class="header_pag01">
+        <h1 class="h1_pag01">
             Definição de estilo
         </h1>
     </header>
     
 
     <main class="main_pag01">
-        <p>
-            Conforme definido no enunciado do trabalho. O estilo foi selecionado no site <a href="https://colorhunt.co/"> Color Hunt</a>
-        </p>
-        <p>
-            Foi selecionada a seguinte paleta:
-        </p>
-        <div class="div_pag01 PCor01">
-            <h2>#06283D</h2>
+        <div class="div_pag01">
+            <h2>
+                Conforme definido no enunciado do trabalho. O estilo foi selecionado no site Color Hunt
+            </h2>
+            <h2>
+                Foi selecionada a paleta a baixo
+            </h2>
         </div>
-        <div class="div_pag01 PCor02">
-            <h2>#1363DF</h2>
-        </div>
-        <div class="div_pag01 PCor03">
-            <h2>#47B5FF</h2>
-        </div>
-        <div class="div_pag01 PCor04">
-            <h2>#DFF6FF</h2>
-        </div>
+
+        <br>
+
+        <a href="https://colorhunt.co/palette/06283d1363df47b5ffdff6ff" target="_blank">
+            <div>
+                <div class="div_paleta PCor01">
+                    <h2>#06283D</h2>
+                </div>
+                <div class="div_paleta PCor02">
+                    <h2>#1363DF</h2>
+                </div>
+                <div class="div_paleta PCor03">
+                    <h2>#47B5FF</h2>
+                </div>
+                <div class="div_paleta PCor04">
+                    <h2>#DFF6FF</h2>
+                </div>
+            </div>
+        </a>
     </main>
 
 
@@ -45,7 +71,12 @@
 
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script type="text/javascript">
+        $(document).on('mouseover', '.container .coluna', function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+        
         var toggle = document.getElementById("DM");
 
         var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
@@ -56,14 +87,20 @@
         toggle.onclick = function() {
             var currentTheme = document.documentElement.getAttribute("data-theme");
             var targetTheme = "light";
+            const faviconTag = document.getElementById("favicon")
+
+            faviconTag.href = "./imagens/favicon_day.ico"
 
             if (currentTheme === "light") {
-                targetTheme = "dark";
+              targetTheme = "dark";
+              faviconTag.href = "./imagens/favicon_night.ico"
             }
 
             document.documentElement.setAttribute('data-theme', targetTheme)
-            localStorage.setItem('theme', targetTheme); 
-        };
+            localStorage.setItem('theme', targetTheme);
+
+        
+};
     </script>
 </body>
 </html>

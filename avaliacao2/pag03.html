@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagens/favicon_day.ico" 
+    type="image/x-icon"  id="favicon">
     <link rel="stylesheet" href="./estilos/style.css">
     <title>Tabelas</title>
 </head>
@@ -141,7 +143,12 @@
         </tfoot>
     </table>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script type="text/javascript">
+        $(document).on('mouseover', '.container .coluna', function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+        
         var toggle = document.getElementById("DM");
 
         var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
@@ -152,14 +159,20 @@
         toggle.onclick = function() {
             var currentTheme = document.documentElement.getAttribute("data-theme");
             var targetTheme = "light";
+            const faviconTag = document.getElementById("favicon")
+
+            faviconTag.href = "./imagens/favicon_day.ico"
 
             if (currentTheme === "light") {
-                targetTheme = "dark";
+              targetTheme = "dark";
+              faviconTag.href = "./imagens/favicon_night.ico"
             }
 
             document.documentElement.setAttribute('data-theme', targetTheme)
-            localStorage.setItem('theme', targetTheme); 
-        };
+            localStorage.setItem('theme', targetTheme);
+
+        
+};
     </script>
 </body>
 </html>
